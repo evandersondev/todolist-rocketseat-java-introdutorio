@@ -1,0 +1,36 @@
+### CREATE USER ###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+
+{
+    "name": "Evanderson Vasconcelos",
+    "username": "evandersondev",
+    "password": "123456"
+}
+
+### CREATE TASK ###
+POST http://localhost:8080/tasks
+Content-Type: application/json
+Authorization: Basic evandersondev:123456
+
+{
+    "description": "New task created",
+    "title": "Spring boot stater",
+    "priority": "High",
+    "startAt": "2025-12-27T13:00:00",
+    "endAt": "2025-12-31T10:30:00"
+}
+
+### LIST TASK BY USER ID ###
+GET http://localhost:8080/tasks
+Authorization: Basic johndoe:123456
+
+### UPDATE TASK ###
+PUT http://localhost:8080/tasks/ec0c642b-bd0d-4922-920c-d7b0036ea141
+Content-Type: application/json
+Authorization: Basic evandersondev:123456
+
+{
+    "title": "Spring Boot  New task created New task createdNew task createdNew task createdNew task created task createdNew task createdNew task created task createdNew task createdNew task created New task created New task created New task createdNew task createdNew task createdNew task created task createdNew task createdNew task created task createdNew task createdNew task created"
+}
